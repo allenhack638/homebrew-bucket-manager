@@ -5,8 +5,7 @@ class BucketManager < Formula
   sha256 "5a09247432cfdddc24b74a835c2b3fd573c5512d86da98ff34277dc161dd1f4c"
   license "MIT"
 
-  depends_on :macos => :sonoma
-  depends_on xcode: :build
+  depends_on macos: :sonoma
 
   def install
     ENV["VERSION"] = version.to_s
@@ -31,6 +30,6 @@ class BucketManager < Formula
   end
 
   test do
-    assert_predicate prefix/"Bucket Manager.app", :exist?
+    assert_path_exists prefix/"Bucket Manager.app"
   end
 end
