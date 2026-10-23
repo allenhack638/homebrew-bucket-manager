@@ -10,6 +10,9 @@ class BucketManager < Formula
   def install
     ENV["VERSION"] = version.to_s
     ENV["BUILD_NUMBER"] = "1"
+    inreplace "make-app.sh",
+      'swift build -c "$CONFIG" -Xswiftc -Xfrontend -Xswiftc -disable-round-trip-debug-types',
+      'swift build -c "$CONFIG" -Xswiftc -Xfrontend -Xswiftc -disable-round-trip-debug-types --disable-sandbox'
     system "./make-app.sh", "release"
     prefix.install "build/Bucket Manager.app"
     (bin/"bucket-manager").write <<~SH
