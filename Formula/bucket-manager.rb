@@ -1,8 +1,8 @@
 class BucketManager < Formula
   desc "Native macOS S3-compatible object storage browser"
   homepage "https://github.com/allenhack638/bucket-manager"
-  url "https://github.com/allenhack638/bucket-manager/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "9cbe92b35afcdec1222d3e21f8eaccc685940cce5b4c2fe359ab3574c4a16d3a"
+  url "https://github.com/allenhack638/bucket-manager/archive/refs/tags/macos-v1.0.0.tar.gz"
+  sha256 "8246d47fb065dd3d712eb5dea213732869a5d3554c5bdfdbf12704d565d6be42"
   license "MIT"
 
   depends_on macos: :sonoma
